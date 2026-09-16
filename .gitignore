@@ -1,0 +1,11 @@
+# installation/build artifacts
+node_modules/
+coverage/
+dist/
+
+# local dev
+local/
+local.*
+.env
+.env.*
+!.env.example

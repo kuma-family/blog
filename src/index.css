@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-accent-50: hsl(270 100% 98%);
+    --color-accent-100: hsl(270 100% 95%);
+    --color-accent-200: hsl(270 100% 90%);
+    --color-accent-300: hsl(270 95% 80%);
+    --color-accent-400: hsl(270 90% 70%);
+    --color-accent-500: hsl(270 85% 60%);
+    --color-accent-600: hsl(270 75% 50%);
+    --color-accent-700: hsl(270 70% 40%);
+    --color-accent-800: hsl(270 65% 30%);
+    --color-accent-900: hsl(270 60% 20%);
+    --color-accent-950: hsl(270 55% 12%);
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+
+    --color-surface: var(--surface-light);
+    --color-surface-elevated: var(--surface-elevated-light);
+    --color-foreground: var(--foreground-light);
+    --color-muted: var(--muted-light);
+    --color-border: var(--border-light);
+}
+
+:root {
+    --surface-light: hsl(0 0% 100%);
+    --surface-elevated-light: hsl(0 0% 98%);
+    --foreground-light: hsl(0 0% 4%);
+    --muted-light: hsl(0 0% 45%);
+    --border-light: hsl(0 0% 90%);
+}
+
+.dark {
+    --color-surface: var(--surface-dark);
+    --color-surface-elevated: var(--surface-elevated-dark);
+    --color-foreground: var(--foreground-dark);
+    --color-muted: var(--muted-dark);
+    --color-border: var(--border-dark);
+
+    --surface-dark: hsl(0 0% 7%);
+    --surface-elevated-dark: hsl(0 0% 12%);
+    --foreground-dark: hsl(0 0% 93%);
+    --muted-dark: hsl(0 0% 55%);
+    --border-dark: hsl(0 0% 18%);
+}
+
+.glass {
+    background: hsl(from var(--color-surface) h s l / 0.7);
+    backdrop-filter: blur(16px);
+}
